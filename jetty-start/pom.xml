@@ -143,16 +143,6 @@
 			<artifactId>jetty-deploy</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<!--dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-gcloud-session-manager</artifactId>
-			<version>${project.version}</version>
-		</dependency-->
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-hazelcast</artifactId>
-			<version>${project.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-http</artifactId>
@@ -181,16 +171,6 @@
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-jndi</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<!--dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-memcached-sessions</artifactId>
-			<version>${project.version}</version>
-		</dependency-->
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-nosql</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>

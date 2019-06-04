@@ -81,8 +81,6 @@
     <module>jetty-util-ajax</module>
     <module>apache-jsp</module>
     <module>apache-jstl</module>
-    <module>jetty-maven-plugin</module>
-    <module>jetty-jspc-maven-plugin</module>
     <module>jetty-deploy</module>
     <module>jetty-start</module>
     <module>jetty-plus</module>
@@ -90,30 +88,20 @@
     <module>jetty-jndi</module>
     <module>jetty-jaas</module>
     <module>jetty-cdi</module>
-    <module>jetty-spring</module>
     <module>jetty-client</module>
     <module>jetty-proxy</module>
     <module>jetty-jaspi</module>
     <module>jetty-rewrite</module>
-    <module>jetty-nosql</module>
     <module>jetty-infinispan</module>
-    <module>jetty-gcloud</module>
-    <module>jetty-memcached</module>
-    <module>jetty-hazelcast</module>
     <module>jetty-unixsocket</module>
     <module>jetty-jmh</module>
     <module>jetty-quickstart</module>
     <module>jetty-distribution</module>
     <module>jetty-runner</module>
     <module>jetty-http-spi</module>
-    <module>jetty-osgi</module>
     <module>jetty-alpn</module>
-    <module>jetty-home</module>
-    <module>jetty-bom</module>
-    <module>jetty-documentation</module>
     <!-- modules that need fixed and added back, or simply dropped and not maintained -->
     <!-- <module>jetty-rhttp</module> -->
-    <!-- <module>jetty-overlay-deployer</module> -->
   </modules>
 
   <build>

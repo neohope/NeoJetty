@@ -103,7 +103,6 @@
               <modules>
                 <module>jsp</module>
                 <module>jstl</module>
-                <module>testmod</module>
               </modules>
             </configuration>
           </execution>

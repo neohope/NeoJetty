@@ -10,9 +10,11 @@ mvn, Eclipse or IDEA
 
 how-to-run
 ============
+org.eclipse.jetty.start.Main.java
 
 
 version
 =========
-1. Keeping all the code, remove some unnecessary file.
+0. Keeping all the code, remove some unnecessary file.
+1. Remove test code and examples. Add IDE support.
 

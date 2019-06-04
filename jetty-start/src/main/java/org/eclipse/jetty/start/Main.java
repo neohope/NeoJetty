@@ -68,11 +68,14 @@ public class Main
 
     public static void main(String[] args)
     {
+    	//neojetty: default is start
+    	String[] neoArgs=new String[] {"jetty.state=jetty.state","etc/jetty-started.xml"};
+    	
         boolean test=false;
         try
         {
             Main main = new Main();
-            StartArgs startArgs = main.processCommandLine(args);
+            StartArgs startArgs = main.processCommandLine(neoArgs);
             test=startArgs.isTestingModeEnabled();
             main.start(startArgs);
         }

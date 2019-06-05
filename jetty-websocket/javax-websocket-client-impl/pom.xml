@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-    <groupId>org.eclipse.jetty.websocket</groupId>
+    <groupId>org.neohope.neojetty.websocket</groupId>
     <artifactId>websocket-parent</artifactId>
-    <version>9.4.18.v20190429</version>
+    <version>0.2.0</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -16,7 +16,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.eclipse.jetty.websocket</groupId>
+      <groupId>org.neohope.neojetty.websocket</groupId>
       <artifactId>websocket-client</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -25,19 +25,19 @@
       <artifactId>javax.websocket-client-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-server</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty.websocket</groupId>
+      <groupId>org.neohope.neojetty.websocket</groupId>
       <artifactId>websocket-server</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty.websocket</groupId>
+      <groupId>org.neohope.neojetty.websocket</groupId>
       <artifactId>websocket-common</artifactId>
       <version>${project.version}</version>
       <classifier>tests</classifier>
@@ -64,7 +64,7 @@
                   <configuration>
                       <instructions>
                         <Bundle-Description>javax.websocket.client Implementation</Bundle-Description>
-                        <Export-Package>org.eclipse.jetty.websocket.jsr356.*;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"</Export-Package>
+                        <Export-Package>org.neohope.neojetty.websocket.jsr356.*;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"</Export-Package>
                         <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.registrar)";resolution:=optional</Require-Capability>
                         <Provide-Capability>osgi.serviceloader;osgi.serviceloader=javax.websocket.ContainerProvider</Provide-Capability>
                       </instructions>

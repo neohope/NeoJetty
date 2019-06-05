@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <parent>
-    <groupId>org.eclipse.jetty</groupId>
+    <groupId>org.neohope.neojetty</groupId>
     <artifactId>jetty-alpn-parent</artifactId>
-    <version>9.4.18.v20190429</version>
+    <version>0.2.0</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -19,7 +19,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-alpn-client</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -29,7 +29,7 @@
       <version>${alpn.api.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty.http2</groupId>
+      <groupId>org.neohope.neojetty.http2</groupId>
       <artifactId>http2-client</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
@@ -60,10 +60,10 @@
              <configuration>
                <instructions>
                  <Bundle-Description>OpenJDK8 Client ALPN</Bundle-Description>
-                 <Import-Package>org.eclipse.jetty.alpn;version="${alpn.majorVersion}.${alpn.minorVersion}.${alpn.incrementalVersion}",*</Import-Package>
+                 <Import-Package>org.neohope.neojetty.alpn;version="${alpn.majorVersion}.${alpn.minorVersion}.${alpn.incrementalVersion}",*</Import-Package>
                  <Export-Package>*</Export-Package>
                  <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.registrar)";resolution:=optional</Require-Capability>
-                 <Provide-Capability>osgi.serviceloader; osgi.serviceloader=org.eclipse.jetty.io.ssl.ALPNProcessor$Client</Provide-Capability>
+                 <Provide-Capability>osgi.serviceloader; osgi.serviceloader=org.neohope.neojetty.io.ssl.ALPNProcessor$Client</Provide-Capability>
                  <_nouses>true</_nouses>
                </instructions>
              </configuration>

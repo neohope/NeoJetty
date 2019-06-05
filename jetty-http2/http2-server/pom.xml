@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <groupId>org.eclipse.jetty.http2</groupId>
+    <groupId>org.neohope.neojetty.http2</groupId>
     <artifactId>http2-parent</artifactId>
-    <version>9.4.18.v20190429</version>
+    <version>0.2.0</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -21,7 +21,7 @@
         <groupId>com.github.madgnome</groupId>
         <artifactId>h2spec-maven-plugin</artifactId>
         <configuration>
-          <mainClass>org.eclipse.jetty.http2.server.H2SpecServer</mainClass>
+          <mainClass>org.neohope.neojetty.http2.server.H2SpecServer</mainClass>
           <skip>${skipTests}</skip>
         </configuration>
         <executions>
@@ -39,12 +39,12 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.eclipse.jetty.http2</groupId>
+      <groupId>org.neohope.neojetty.http2</groupId>
       <artifactId>http2-common</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-server</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -55,19 +55,19 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-servlet</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-servlets</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-alpn-server</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>

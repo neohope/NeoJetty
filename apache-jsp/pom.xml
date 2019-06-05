@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-    <groupId>org.eclipse.jetty</groupId>
-    <artifactId>jetty-project</artifactId>
-    <version>9.4.18.v20190429</version>
+    <groupId>org.neohope.neojetty</groupId>
+    <artifactId>neojetty-parent</artifactId>
+    <version>0.2.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>apache-jsp</artifactId>
@@ -22,8 +22,8 @@
             <configuration>
               <instructions>
                 <Bundle-Description>Jetty-specific ServletContainerInitializer for Jasper</Bundle-Description>
-                <Export-Package>org.eclipse.jetty.apache.jsp.*;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}",
-                                org.eclipse.jetty.jsp.*;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"
+                <Export-Package>org.neohope.neojetty.apache.jsp.*;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}",
+                                org.neohope.neojetty.jsp.*;version="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"
                 </Export-Package>
                 <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.registrar)";resolution:=optional</Require-Capability>
                 <Provide-Capability>osgi.serviceloader;osgi.serviceloader=javax.servlet.ServletContainerInitializer,osgi.serviceloader;osgi.serviceloader=org.apache.juli.logging.Log</Provide-Capability>
@@ -61,7 +61,7 @@
 
   <dependencies>
     <dependency>
-        <groupId>org.eclipse.jetty</groupId>
+        <groupId>org.neohope.neojetty</groupId>
         <artifactId>jetty-util</artifactId>
         <version>${project.version}</version>
     </dependency>
@@ -86,7 +86,7 @@
 
     <!-- Running in jetty needs annotations -->
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-annotations</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -94,20 +94,20 @@
 
     <!-- tests -->
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-servlet</artifactId>
       <version>${project.version}</version>
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-servlet</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-http</artifactId>
       <version>${project.version}</version>
       <classifier>tests</classifier>

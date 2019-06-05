@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-    <artifactId>jetty-project</artifactId>
-    <groupId>org.eclipse.jetty</groupId>
-    <version>9.4.18.v20190429</version>
+    <artifactId>neojetty-parent</artifactId>
+    <groupId>org.neohope.neojetty</groupId>
+    <version>0.2.0</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.eclipse.jetty.http2</groupId>
+  <groupId>org.neohope.neojetty.http2</groupId>
   <artifactId>http2-parent</artifactId>
   <packaging>pom</packaging>
   <name>Jetty :: HTTP2</name>

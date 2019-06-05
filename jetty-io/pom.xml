@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-    <artifactId>jetty-project</artifactId>
-    <groupId>org.eclipse.jetty</groupId>
-    <version>9.4.18.v20190429</version>
+    <artifactId>neojetty-parent</artifactId>
+    <groupId>org.neohope.neojetty</groupId>
+    <version>0.2.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>jetty-io</artifactId>
@@ -13,7 +13,7 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-util</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -29,7 +29,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
         <configuration>
-          <onlyAnalyze>org.eclipse.jetty.io.*</onlyAnalyze>
+          <onlyAnalyze>org.neohope.neojetty.io.*</onlyAnalyze>
         </configuration>
       </plugin>
     </plugins>

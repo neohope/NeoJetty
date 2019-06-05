@@ -2,9 +2,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
-		<groupId>org.eclipse.jetty</groupId>
-		<artifactId>jetty-project</artifactId>
-		<version>9.4.18.v20190429</version>
+		<groupId>org.neohope.neojetty</groupId>
+		<artifactId>neojetty-parent</artifactId>
+		<version>0.2.0</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>jetty-start</artifactId>
@@ -21,7 +21,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>org.eclipse.jetty.start.Main</mainClass>
+							<mainClass>org.neohope.neojetty.start.Main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -30,7 +30,7 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<configuration>
-					<onlyAnalyze>org.eclipse.jetty.start.*</onlyAnalyze>
+					<onlyAnalyze>org.neohope.neojetty.start.*</onlyAnalyze>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -49,7 +49,7 @@
 							<shadedClassifierName>shaded</shadedClassifierName>
 							<filters>
 								<filter>
-									<artifact>org.eclipse.jetty:jetty-util</artifact>
+									<artifact>org.neohope.neojetty:jetty-util</artifact>
 									<includes>
 										<include>org/eclipse/jetty/util/JavaVersion*</include>
 										<include>org/eclipse/jetty/util/ManifestUtils*</include>
@@ -59,8 +59,8 @@
 							</filters>
 							<relocations>
 								<relocation>
-									<pattern>org.eclipse.jetty.util</pattern>
-									<shadedPattern>org.eclipse.jetty.start.shaded.util</shadedPattern>
+									<pattern>org.neohope.neojetty.util</pattern>
+									<shadedPattern>org.neohope.neojetty.start.shaded.util</shadedPattern>
 								</relocation>
 							</relocations>
 						</configuration>
@@ -94,147 +94,147 @@
 
         <!-- copy lib -->
         <dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>apache-jsp</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>apache-jstl</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-alpn-conscrypt-server</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-alpn-java-server</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-alpn-openjdk8-server</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-alpn-server</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-annotations</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-client</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-continuation</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-deploy</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-http</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-io</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-jaas</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-jaspi</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-jmx</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-jndi</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-plus</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-proxy</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-quickstart</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-rewrite</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<!--dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-schemas-3.1.jar</artifactId>
 			<version>${project.version}</version>
 		</dependency-->
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-security</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-server</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-servlet</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-servlets</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-unixsocket</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-util</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-webapp</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
+			<groupId>org.neohope.neojetty</groupId>
 			<artifactId>jetty-xml</artifactId>
 			<version>${project.version}</version>
 		</dependency>

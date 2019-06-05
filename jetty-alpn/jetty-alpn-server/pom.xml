@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-    <groupId>org.eclipse.jetty</groupId>
+    <groupId>org.neohope.neojetty</groupId>
     <artifactId>jetty-alpn-parent</artifactId>
-    <version>9.4.18.v20190429</version>
+    <version>0.2.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>jetty-alpn-server</artifactId>
@@ -22,7 +22,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
         <configuration>
-          <onlyAnalyze>org.eclipse.jetty.alpn.*</onlyAnalyze>
+          <onlyAnalyze>org.neohope.neojetty.alpn.*</onlyAnalyze>
         </configuration>
       </plugin>
       <plugin>
@@ -47,9 +47,9 @@
         <configuration>
             <instructions>
               <Bundle-SymbolicName>${bundle-symbolic-name};singleton:=true</Bundle-SymbolicName>
-              <Export-Package>org.eclipse.jetty.alpn.server,*</Export-Package>
-              <Import-Package>org.eclipse.jetty.alpn;version="${alpn.majorVersion}.${alpn.minorVersion}.${alpn.incrementalVersion}",*</Import-Package>
-              <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.processor)";resolution:=optional, osgi.serviceloader; filter:="(osgi.serviceloader=org.eclipse.jetty.io.ssl.ALPNProcessor$Server)";resolution:=optional;cardinality:=multiple</Require-Capability>
+              <Export-Package>org.neohope.neojetty.alpn.server,*</Export-Package>
+              <Import-Package>org.neohope.neojetty.alpn;version="${alpn.majorVersion}.${alpn.minorVersion}.${alpn.incrementalVersion}",*</Import-Package>
+              <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.processor)";resolution:=optional, osgi.serviceloader; filter:="(osgi.serviceloader=org.neohope.neojetty.io.ssl.ALPNProcessor$Server)";resolution:=optional;cardinality:=multiple</Require-Capability>
             </instructions>
         </configuration>
       </plugin>
@@ -57,7 +57,7 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-server</artifactId>
       <version>${project.version}</version>
     </dependency>

@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-    <groupId>org.eclipse.jetty</groupId>
+    <groupId>org.neohope.neojetty</groupId>
     <artifactId>jetty-alpn-parent</artifactId>
-    <version>9.4.18.v20190429</version>
+    <version>0.2.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>jetty-alpn-client</artifactId>
@@ -23,8 +23,8 @@
             </goals>
             <configuration>
               <instructions>
-               <Import-Package>org.eclipse.jetty.alpn;resolution:=optional,*</Import-Package>
-               <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.processor)";resolution:=optional, osgi.serviceloader; filter:="(osgi.serviceloader=org.eclipse.jetty.io.ssl.ALPNProcessor$Client)";resolution:=optional;cardinality:=multiple</Require-Capability>
+               <Import-Package>org.neohope.neojetty.alpn;resolution:=optional,*</Import-Package>
+               <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.processor)";resolution:=optional, osgi.serviceloader; filter:="(osgi.serviceloader=org.neohope.neojetty.io.ssl.ALPNProcessor$Client)";resolution:=optional;cardinality:=multiple</Require-Capability>
               </instructions>
             </configuration>
           </execution>
@@ -40,14 +40,14 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
         <configuration>
-          <onlyAnalyze>org.eclipse.jetty.alpn.*</onlyAnalyze>
+          <onlyAnalyze>org.neohope.neojetty.alpn.*</onlyAnalyze>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-io</artifactId>
       <version>${project.version}</version>
     </dependency>

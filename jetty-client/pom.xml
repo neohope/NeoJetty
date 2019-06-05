@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-    <groupId>org.eclipse.jetty</groupId>
-    <artifactId>jetty-project</artifactId>
-    <version>9.4.18.v20190429</version>
+    <groupId>org.neohope.neojetty</groupId>
+    <artifactId>neojetty-parent</artifactId>
+    <version>0.2.0</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -19,7 +19,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
         <configuration>
-          <onlyAnalyze>org.eclipse.jetty.client.*</onlyAnalyze>
+          <onlyAnalyze>org.neohope.neojetty.client.*</onlyAnalyze>
         </configuration>
       </plugin>
       <plugin>
@@ -62,23 +62,23 @@
               <shadedClassifierName>hybrid</shadedClassifierName>
               <artifactSet>
                 <includes>
-                  <include>org.eclipse.jetty:jetty-http</include>
-                  <include>org.eclipse.jetty:jetty-io</include>
-                  <include>org.eclipse.jetty:jetty-util</include>
+                  <include>org.neohope.neojetty:jetty-http</include>
+                  <include>org.neohope.neojetty:jetty-io</include>
+                  <include>org.neohope.neojetty:jetty-util</include>
                 </includes>
               </artifactSet>
               <relocations>
                 <relocation>
-                  <pattern>org.eclipse.jetty.http</pattern>
-                  <shadedPattern>org.eclipse.jetty.client.shaded.http</shadedPattern>
+                  <pattern>org.neohope.neojetty.http</pattern>
+                  <shadedPattern>org.neohope.neojetty.client.shaded.http</shadedPattern>
                 </relocation>
                 <relocation>
-                  <pattern>org.eclipse.jetty.io</pattern>
-                  <shadedPattern>org.eclipse.jetty.client.shaded.io</shadedPattern>
+                  <pattern>org.neohope.neojetty.io</pattern>
+                  <shadedPattern>org.neohope.neojetty.client.shaded.io</shadedPattern>
                 </relocation>
                 <relocation>
-                  <pattern>org.eclipse.jetty.util</pattern>
-                  <shadedPattern>org.eclipse.jetty.client.shaded.util</shadedPattern>
+                  <pattern>org.neohope.neojetty.util</pattern>
+                  <shadedPattern>org.neohope.neojetty.client.shaded.util</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>
@@ -90,30 +90,30 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-http</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-io</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-jmx</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
     </dependency>
 
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-server</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-security</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>

@@ -6,7 +6,7 @@
 
 
 
-  <groupId>org.eclipse.jetty.its</groupId>
+  <groupId>org.neohope.neojetty.its</groupId>
   <artifactId>jetty-runner-it-test</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
@@ -19,7 +19,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
+      <groupId>org.neohope.neojetty</groupId>
       <artifactId>jetty-runner</artifactId>
       <version>@project.version@</version>
     </dependency>
@@ -42,7 +42,7 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.eclipse.jetty</groupId>
+                  <groupId>org.neohope.neojetty</groupId>
                   <artifactId>jetty-runner</artifactId>
                   <version>@project.version@</version>
                   <type>jar</type>

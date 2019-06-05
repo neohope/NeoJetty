@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.eclipse.jetty</groupId>
-  <artifactId>jetty-project</artifactId>
-  <version>9.4.18.v20190429</version>
+  <groupId>org.neohope.neojetty</groupId>
+  <artifactId>neojetty-parent</artifactId>
+  <version>0.2.0</version>
   <name>Jetty :: Project</name>
   <description>The Eclipse Jetty Project</description>
   <packaging>pom</packaging>
@@ -92,11 +92,8 @@
     <module>jetty-proxy</module>
     <module>jetty-jaspi</module>
     <module>jetty-rewrite</module>
-    <module>jetty-infinispan</module>
     <module>jetty-unixsocket</module>
-    <module>jetty-jmh</module>
     <module>jetty-quickstart</module>
-    <module>jetty-distribution</module>
     <module>jetty-runner</module>
     <module>jetty-http-spi</module>
     <module>jetty-alpn</module>
@@ -454,7 +451,7 @@
             <detectJavaApiLink>false</detectJavaApiLink>
             <show>protected</show>
             <attach>true</attach>
-            <excludePackageNames>com.acme,org.slf4j*,org.mortbay*,*.jmh*,org.eclipse.jetty.embedded*,org.eclipse.jetty.example.asyncrest*,org.eclipse.jetty.test*</excludePackageNames>
+            <excludePackageNames>com.acme,org.slf4j*,org.mortbay*,*.jmh*,org.neohope.neojetty.embedded*,org.neohope.neojetty.example.asyncrest*,org.neohope.neojetty.test*</excludePackageNames>
           </configuration>
         </plugin>
         <plugin>
@@ -623,7 +620,7 @@
             <findbugsXmlOutput>true</findbugsXmlOutput>
             <xmlOutput>true</xmlOutput>
             <effort>Max</effort>
-            <onlyAnalyze>org.eclipse.jetty.*</onlyAnalyze>
+            <onlyAnalyze>org.neohope.neojetty.*</onlyAnalyze>
           </configuration>
         </plugin>
         <plugin>

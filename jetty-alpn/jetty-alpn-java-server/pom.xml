@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>org.eclipse.jetty</groupId>
+        <groupId>org.neohope.neojetty</groupId>
         <artifactId>jetty-alpn-parent</artifactId>
-        <version>9.4.18.v20190429</version>
+        <version>0.2.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -34,7 +34,7 @@
                  <instructions>
                    <Bundle-Description>JDK9 Server ALPN</Bundle-Description>
                    <Require-Capability>osgi.extender; filter:="(osgi.extender=osgi.serviceloader.registrar)";resolution:=optional</Require-Capability>
-                   <Provide-Capability>osgi.serviceloader;osgi.serviceloader=org.eclipse.jetty.io.ssl.ALPNProcessor$Server</Provide-Capability>
+                   <Provide-Capability>osgi.serviceloader;osgi.serviceloader=org.neohope.neojetty.io.ssl.ALPNProcessor$Server</Provide-Capability>
                    <_nouses>true</_nouses>
                  </instructions>
                </configuration>
@@ -44,7 +44,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.jetty</groupId>
+            <groupId>org.neohope.neojetty</groupId>
             <artifactId>jetty-io</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -54,12 +54,12 @@
             <version>${alpn.api.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty</groupId>
+            <groupId>org.neohope.neojetty</groupId>
             <artifactId>jetty-alpn-server</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.http2</groupId>
+            <groupId>org.neohope.neojetty.http2</groupId>
             <artifactId>http2-server</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>

@@ -4,10 +4,13 @@
 .project
 .idea
 
+
 /target
 /**/target
 /jetty-start/lib/
 /jetty-start/temp/
 /jetty-start/webapps/
 
+
 *.iml
+jetty.state
